@@ -22,8 +22,8 @@ $ cd base
 ```bash
 # 서버 실행
 cd backend
-python3 -m venv venv(각자 os 환경에 맞게 설치)
-source venv\bin\activate
+python3 -m venv venv(os 환경에 맞게 설치)
+source venv\bin\activate(os 환경에 맞게 실행)
 (pip install 해야할 경우)
 pip install -r requirements.txt
 ./migrate.sh
