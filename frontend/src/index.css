@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900; /* variable font 범위 */
+  font-style: normal;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  -webkit-user-drag: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+/* 모든 요소의 스크롤바 숨기기 (Chrome, Safari, Edge) */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox: 스크롤바 너비를 0으로 설정 */
+html {
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide_scroll {
+  -ms-overflow-style: none; /* IE, Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* 항상 표시되는 스크롤바 (Chrome, Safari, Edge) */
+.scrollbar-visible::-webkit-scrollbar {
+  width: 6px; /* 세로 스크롤바 두께 */
+  height: 8px; /* 가로 스크롤바 두께 */
+}
+
+.scrollbar-visible::-webkit-scrollbar-track {
+  background: #ffffff; /* 트랙 색상 */
+  border-radius: 9999px;
+}
+
+.scrollbar-visible::-webkit-scrollbar-thumb {
+  background-color: #ffffff; /* 썸 색상 */
+  border-radius: 9999px;
+  border: 2px solid #f1f1f1; /* 트랙과의 간격 */
+}
+
+.scrollbar-visible::-webkit-scrollbar-thumb:hover {
+  background-color: #ffffff; /* hover 시 진해짐 */
+}
+
+/* Firefox 대응 */
+.scrollbar-visible {
+  scrollbar-width: thin; /* 얇은 스크롤바 */
+  scrollbar-color: #ffffff #f1f1f1; /* thumb, track */
+}
+
+body {
+  margin: 0;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
